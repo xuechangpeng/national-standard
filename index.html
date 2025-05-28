@@ -2,9 +2,26 @@
 <html>
 <head>
     <title>国标图集</title>
+    <style>
+        body {
+            display: flex;
+        }
+        aside {
+            width: 200px;
+        }
+        section {
+            flex-grow: 1;
+        }
+    </style>
 </head>
-<frameset cols="200,*">
-    <frame src="./content/aside.html">
-    <frame name="pdf" src="about:blank">
-</frameset>
+<body>
+    <aside>
+        <!-- 你可以在这里加载外部内容或直接放置侧边栏内容 -->
+        <iframe src="./content/aside.html" style="width:100%;height:100vh;border:none;"></iframe>
+    </aside>
+    <section>
+        <!-- 这里是主要内容区域 -->
+        <iframe name="pdf" src="about:blank" style="width:100%;height:100vh;border:none;"></iframe>
+    </section>
+</body>
 </html>
